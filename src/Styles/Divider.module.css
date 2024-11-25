@@ -1,0 +1,26 @@
+
+.roadDivider {
+    height: 70px;
+    background: url('../Assets/Images/roadDivider.jpg') 0 0 repeat-x;
+    animation: wave-animation 10.7s infinite linear;
+  }
+  .roadDividerWhite {
+    height: 70px;
+    background: url('../Assets/Images/roadDividerWhite.jpg') 0 0 repeat-x;
+    animation: wave-animation 10.7s infinite linear;
+  }
+
+  @keyframes wave-animation {
+    from {background-position: 0 0;}
+    to {background-position: -912px 0;}
+  }
+
+    /* h2 */
+    .dividerTitle {
+      @apply bg-gradient-to-b from-primary to-[#ffd200] text-[40px] text-center pt-10 font-bold text-white;
+      text-shadow:
+      1px 1px 4px black,
+      -1px -1px 4px black,
+      -1px 1px 4px black;
+    }
+  

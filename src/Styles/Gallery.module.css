@@ -1,0 +1,15 @@
+/* .contentContainer {
+    @apply max-w-[1300px] mx-auto px-4;
+}
+
+
+.imageItem {
+   @apply h-[350px] rounded-2xl border-4 border-black;
+} */
+
+.imageContainer {
+    @apply flex ;
+}
+.imageItem {
+    @apply transition-all duration-200 h-[300px];
+}

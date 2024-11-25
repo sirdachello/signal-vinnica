@@ -1,0 +1,89 @@
+p {
+  @apply sm:text-[20px]
+}
+h3 {
+  @apply leading-relaxed my-4 text-[18px] sm:text-[20px] md:text-[30px];
+}
+
+/* images look */
+
+.studyTheoryImages {
+  @apply mb-11 relative mx-auto flex w-[100%] justify-center max-w-[800px] transition-all duration-1000;
+
+}
+
+
+
+
+.studyTheoryImages :nth-child(1) {
+  @apply rounded-[20%] absolute left-0 top-0 z-[1] w-[35%] border-[8px] border-white;
+  &.second {
+    @apply right-0 left-auto;
+  }
+}
+
+.studyTheoryImages :nth-child(2) {
+  @apply rounded-full pt-[8%] relative left-0 top-0 w-[80%] border-[8px] border-white;
+  
+}
+
+/* images look */
+
+/* list specific  */
+
+.studyList {
+  @apply list-disc pl-2;
+}
+.studyList > li {
+  @apply pl-2 text-[16px] sm:text-[18px] pb-2;
+}
+.studyList > li:last-child {
+  @apply max-w-[500px];
+}
+
+
+.studyList > li::marker {
+  @apply text-[16px] sm:text-[20px];
+}
+
+.studyList > li:nth-child(1)::marker {
+  content: "\1F4D8";
+}
+.studyList > li:nth-child(2)::marker {
+  content: "\1FA79";
+}
+.studyList > li:nth-child(3)::marker {
+  content: "\1F46E";
+}
+.studyList > li:nth-child(4)::marker {
+  content: "\1F393";
+}
+
+.studyList > li:last-child::marker {
+  content: "";
+}
+
+.studyList > li:last-child {
+  @apply bg-primary rounded-2xl p-3 text-balance text-center mt-2 shadow-md;
+}
+
+/* list specific  */
+
+
+
+.articleContent {
+  @apply w-[90%] sm:w-[500px] mx-auto;
+}
+
+
+
+.studyArticle {
+  @apply flex flex-col items-center mt-12 lg:flex-row overflow-hidden;
+}
+
+
+
+.studyArticle:not(:first-of-type) {
+  @apply mt-[100px] flex-col lg:flex-row-reverse;
+
+}

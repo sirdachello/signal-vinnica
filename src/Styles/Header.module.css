@@ -1,0 +1,62 @@
+header {
+  background: url("../Assets/Images/traffic_cone_background.jpg") no-repeat
+    center/cover;
+  height: 90vh;
+  &::after {
+    content: "";
+    pointer-events: none;
+    @apply absolute top-0 z-0 h-[90vh] w-full bg-gradient-to-b from-transparent via-transparent via-70% to-black;
+  }
+}
+
+.headerNav {
+  @apply fixed top-0 z-10 flex w-[100vw] items-center justify-around gap-3 rounded-bl-xl rounded-br-xl bg-primary  p-[1.2rem] text-[11px] transition-all duration-500 sm:flex sm:gap-8 sm:text-[16px] md:justify-center lg:gap-24 md:text-[18px];
+
+
+}
+
+.altNavbar {
+  @apply bg-opacity-5 backdrop-blur-lg;
+}
+.headerNav a {
+  @apply relative text-nowrap transition-all duration-200;
+
+  &::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: black;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @apply transition-all duration-200;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.headerBrand {
+  @apply absolute left-1/2 top-[45%] flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-12;
+  animation: fadeIn 2s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+header img {
+  @apply w-[300px];
+}
+h1 {
+  @apply relative text-center text-[30px] font-bold text-white sm:text-[50px];
+  text-shadow:
+    1px 1px 4px black,
+    -1px -1px 4px black,
+    -1px 1px 4px black;
+}

@@ -1,0 +1,10 @@
+.contentContainer {
+    @apply max-w-[1300px] mx-auto px-4;
+}
+
+/* specific fix of overflowing animation to the bottom of the screen for studyArticle */
+
+.studySection {
+    @apply overflow-hidden;
+}
+

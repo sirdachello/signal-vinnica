@@ -1,0 +1,28 @@
+.theoryTable caption {
+  @apply bg-primary py-3 text-[18px] sm:text-[25px] md:text-[30px];
+  border-radius: 15px 15px 0 0;
+}
+
+.theoryTable {
+  @apply shadow-xl mx-auto mb-12 text-[16px] sm:text-[20px] md:text-[25px];
+}
+
+.theoryTable tr:nth-child() {
+  @apply mx-auto my-[100px] text-[16px] sm:text-[20px] md:text-[25px];
+}
+
+.theoryTable tbody td:nth-child(2) {
+  @apply bg-primary ;
+}
+
+.theoryTable tbody td:not(:nth-child(2)) {
+  @apply bg-[#fecf0031];
+}
+
+.theoryTable td {
+  @apply px-2 text-balance border-t-[2px] border-black py-4 text-center sm:p-4;
+}
+
+.theoryTable tfoot td {
+  @apply text-balance border-t-[2px] border-black py-4 text-center sm:p-4;
+}
