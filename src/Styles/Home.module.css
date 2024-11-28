@@ -3,8 +3,8 @@
 }
 
 /* specific fix of overflowing animation to the bottom of the screen for studyArticle */
-
+/* 
 .studySection {
     @apply overflow-hidden;
 }
-
+ */

@@ -1,15 +1,15 @@
-import monitor from "../Assets/Icons/monitor.png";
-import hiring from "../Assets/Icons/hiring.png";
-import brake from "../Assets/Icons/brake.png";
-import cogs from "../Assets/Icons/cogs.png";
-import insurance from "../Assets/Icons/car-insurance.png";
-import gift from "../Assets/Icons/gift.png";
-import training from "../Assets/Icons/training.png";
-import years from "../Assets/Icons/Group 1 (1).png";
+import monitor from "../Assets/Icons/monitor.webp";
+import hiring from "../Assets/Icons/hiring.webp";
+import brake from "../Assets/Icons/brake.webp";
+import cogs from "../Assets/Icons/cogs.webp";
+import insurance from "../Assets/Icons/car-insurance.webp";
+import gift from "../Assets/Icons/gift.webp";
+import training from "../Assets/Icons/training.webp";
+import years from "../Assets/Icons/Group 1 (1).webp";
 
 import styles from "../Styles/BenefitsList.module.css";
 
-import { useEffect, useState } from "react";
+import React ,{ useEffect, useState } from "react";
 import BenefitCard from "./BenefitCard";
 
 const cardsInfo = [
@@ -63,32 +63,35 @@ const cardsInfo = [
   },
 ]
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {  
-      if (entry.isIntersecting) {
-        entry.target.classList.add(styles.showCard);
-      } else {
-        entry.target.classList.remove(styles.showCard);
-      }
+const useIntersectionObserver = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(styles.showCard);
+        }
+      });
     });
-  });
+
+    const listItems = document.querySelectorAll(`.${styles.ListItem}`);
+    listItems.forEach((item) => observer.observe(item));
+
+    return () => {
+      listItems.forEach((item) => observer.unobserve(item));
+    };
+  }, []);
+};
 
 export default function BenefitsList() {
     const [flippedCard, setFlippedCard] = useState();
-    useEffect(() => {
-        const myList = document.querySelectorAll(`.${styles.ListItem}`);
-        if (myList) {
-          myList.forEach((el) => observer.observe(el));
-        }
-    
-        return () => {
-          if (myList) myList.forEach((el) => observer.unobserve(el));
-        };
-      }, []);
+
+    useIntersectionObserver();
 
       const cards = cardsInfo.map((card, index) => {
         return (
+          <React.Fragment key={index}>
           <BenefitCard setFlippedCard={setFlippedCard} flippedCard={flippedCard} index={index} image={card.image} h3={card.h3} text={card.text} alt={card.alt}/>
+          </React.Fragment>
         )
       })
 

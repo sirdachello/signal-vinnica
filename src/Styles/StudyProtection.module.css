@@ -1,16 +1,3 @@
-details summary::-webkit-details-marker,
-details summary::marker {
-  display: none;
-  content: "";
-}
-details summary {
-  cursor: pointer;
-}
-
-p {
-  @apply my-4 indent-3 leading-relaxed;
-}
-
 .documentationList,
 .professionList {
   @apply text-[14px] sm:text-[18px];
@@ -21,15 +8,11 @@ p {
 }
 
 .professionListContainer .professionList:first-child > li:nth-child(odd),
-.documentationListContainer .documentationList:first-child > li:nth-child(odd) {
-  @apply bg-[#fecf0031];
-}
-
+.documentationListContainer .documentationList:first-child > li:nth-child(odd),
 .professionList:not(:first-child) > li:nth-child(even),
 .documentationList:not(:first-child) > li:nth-child(even) {
   @apply bg-[#fecf0031];
 }
-
 .professionListContainer .professionList,
 .documentationListContainer .documentationList {
   @apply w-1/2 list-inside list-disc text-balance text-[12px] sm:text-[14px] md:text-[16px];
@@ -53,19 +36,15 @@ p {
   }
 }
 
-.toggleListButton {
+/* .toggleListButton {
   @apply ml-3 inline-block rounded-2xl bg-primary px-5 shadow-md transition-all duration-200;
-  &:hover {
-    @apply scale-110 bg-[#ffd000c7];
-  }
+} */
+
+
+.toggleListButton {
+  @apply block mx-auto py-1 my-3 overflow-hidden w-[200px] rounded-2xl bg-primary shadow-md transition-all duration-1000;
 }
 
-.toggleListButtonInner {
-  @apply block mx-auto my-5 h-0 overflow-hidden w-0 rounded-2xl bg-primary shadow-md transition-all duration-1000;
-  &:hover {
-    @apply scale-110 bg-[#ffd000c7];
-  }
-}
-.toggleListButtonInner.visible {
-@apply h-12 w-[50%] max-w-[600px] text-[20px] font-semibold;
+.toggleListButton:hover {
+  @apply scale-110 bg-[#ffd000c7];
 }

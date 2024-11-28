@@ -2,7 +2,7 @@ h3 {
   @apply my-4 text-[18px] leading-relaxed sm:text-[20px] md:text-[30px];
 }
 .reqList {
-  @apply list-inside list-decimal text-[];
+  @apply list-inside list-decimal;
 }
 
 .reqList > li {

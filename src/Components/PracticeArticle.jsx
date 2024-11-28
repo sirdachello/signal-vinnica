@@ -1,7 +1,7 @@
 import React from "react";
 
-import cone from "../Assets/Images/StudySection/drivingCone.jpg";
-import wheel from "../Assets/Images/StudySection/drivingWheel.jpg";
+import cone from "../Assets/Images/StudySection/drivingCone.webp";
+import wheel from "../Assets/Images/StudySection/drivingWheel.webp";
 
 import styles from "../Styles/Study.module.css";
 import rollInStyles from "../Styles/RollInAnimation.module.css";

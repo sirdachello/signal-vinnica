@@ -1,31 +1,27 @@
 .footerBlock {
-  @apply mt-[80px] px-4 py-[90px] pb-[] relative flex gap-11 items-center justify-around flex-col sm:flex-row bg-gradient-to-b from-[#ffd200] to-primary text-[40px] font-semibold;
+  @apply mt-[80px] px-4 py-[90px] pb-[120px] relative flex gap-11 items-center justify-around flex-col sm:flex-row bg-gradient-to-b from-[#ffd200] to-primary font-semibold;
   @apply text-[19px] sm:text-[20px] md:text-[25px] xl:text-[30px] text-center md:text-left;
 
-  &::before {
+  &::before, &::after {
     content: "";
     display: block;
     position: absolute;
-    top: 0;
     left: 0;
     width: 100%;
     height: 70px;
-    background: url("../Assets/Images/roadDividerWhite.jpg") 0 0 repeat-x;
+    background-repeat: repeat-x;
     animation: wave-animation-backwards 10s infinite linear;
     transform: rotateX(180deg);
   }
 
+  &::before {
+    top: 0;
+    background-image: url("../Assets/Images/roadDividerWhite.jpg");
+  }
+
   &::after {
-    content: "";
-    display: block;
-    position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    background: url("../Assets/Images/roadDivider.jpg") 0 0 repeat-x;
-    animation: wave-animation-backwards 10s infinite linear;
-    transform: rotateX(180deg);
+    background-image: url("../Assets/Images/roadDivider.jpg");
     z-index: 5;
   }
 }
@@ -40,7 +36,7 @@
 }
 
 .footerMap {
-  @apply relative h-[250px] w-[280px] rounded-[15px] transition-all duration-200 md:h-[250px] md:w-[350px] lg:md:w-[400px] lg:h-[280px] xl:w-[600px] xl:h-[300px];
+  @apply relative h-[250px] w-[280px] rounded-[15px] transition-all duration-200 md:h-[250px] md:w-[350px] lg:w-[400px] lg:h-[280px] xl:w-[600px] xl:h-[300px];
 }
 
 .CarIcon {
@@ -51,20 +47,20 @@
 @keyframes drive {
   0% {
     transform: rotateZ(0);
-    @apply bottom-[0];
+    bottom: 0;
   }
   33% {
     transform: rotateZ(-7deg);
   }
   50% {
     transform: rotateZ(0);
-    @apply bottom-[15px];
+    bottom: 15px;
   }
   66% {
     transform: rotateZ(4deg);
   }
   100% {
     transform: rotateZ(0);
-    @apply bottom-[0];
+    bottom: 0;
   }
 }

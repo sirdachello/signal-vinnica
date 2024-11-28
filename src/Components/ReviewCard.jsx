@@ -19,11 +19,9 @@ export default function ReviewCard({ client }) {
           <div>
             {client.reviewName}
             <div className="flex">
-              <StarIcon />
-              <StarIcon />
-              <StarIcon />
-              <StarIcon />
-              <StarIcon />
+            {[...Array(5)].map((_, index) => (
+                <StarIcon key={index} aria-label={`Зірка ${index + 1}`} />
+              ))}
             </div>
           </div>
         </div>
@@ -37,6 +35,8 @@ export default function ReviewCard({ client }) {
         <button
           onClick={() => setIsExpanded((prev) => !prev)}
           className={styles.cardButton}
+          aria-expanded={isExpanded}
+          aria-label={isExpanded ? "Згорнути" : "Розгорнути"}
         >
           {isExpanded ? "Меньше" : "Більше"}
         </button>

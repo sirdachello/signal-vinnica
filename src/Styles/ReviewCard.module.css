@@ -1,16 +1,23 @@
-.cardTextBlock {
+.cardTextBlock, 
+.cardTextBlockExpanded {
     @apply relative overflow-hidden rounded-b-3xl bg-[#fecf0031] p-4 pb-[25px] transition-all duration-700;
     @apply max-h-[184px];
 }
+.cardTextBlock {
+    @apply max-h-[184px];
+}
 .cardTextBlockExpanded {
-    @apply relative overflow-hidden rounded-b-3xl bg-[#fecf0031] p-4 pb-[25px] transition-all duration-700;
     @apply max-h-[900px];
 }
+
+.cardText, .cardTextExpanded {
+    @apply overflow-hidden whitespace-pre-wrap break-words leading-[1.5]
+ }
 .cardText {
-    @apply line-clamp-6 overflow-hidden whitespace-pre-wrap break-words leading-[1.5];
+    @apply line-clamp-6;
 }
 .cardTextExpanded {
-    @apply line-clamp-none overflow-hidden whitespace-pre-wrap break-words leading-[1.5];
+    @apply line-clamp-none;
 }
 .cardButton {
     @apply absolute left-0 right-0 bg-primary hover:bg-[#ffd000c7];

@@ -1,14 +1,16 @@
+.roadDivider, .roadDividerWhite {
+  height: 70px;
+  animation: wave-animation 10.7s infinite linear;
+  background: repeat-x;
+}
 
 .roadDivider {
-    height: 70px;
-    background: url('../Assets/Images/roadDivider.jpg') 0 0 repeat-x;
-    animation: wave-animation 10.7s infinite linear;
-  }
-  .roadDividerWhite {
-    height: 70px;
-    background: url('../Assets/Images/roadDividerWhite.jpg') 0 0 repeat-x;
-    animation: wave-animation 10.7s infinite linear;
-  }
+  background-image: url('../Assets/Images/roadDivider.jpg');
+}
+
+.roadDividerWhite {
+  background-image: url('../Assets/Images/roadDividerWhite.jpg');
+}
 
   @keyframes wave-animation {
     from {background-position: 0 0;}

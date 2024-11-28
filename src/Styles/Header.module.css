@@ -1,18 +1,23 @@
 header {
-  background: url("../Assets/Images/traffic_cone_background.jpg") no-repeat
-    center/cover;
-  height: 90vh;
+  @apply bg-cover bg-center;
+  background-image: url("../Assets/Images/traffic_cone_backgroundMobile.jpg");
+  height: 75vh;
+  max-height: 800px;
   &::after {
     content: "";
     pointer-events: none;
-    @apply absolute top-0 z-0 h-[90vh] w-full bg-gradient-to-b from-transparent via-transparent via-70% to-black;
+    @apply absolute top-0 z-10 h-[75vh] max-h-[800px] w-full bg-gradient-to-b from-transparent via-transparent via-70% to-black;
+  }
+}
+
+@media (min-width: 640px) {
+  header {
+    background-image: url("../Assets/Images/traffic_cone_background.jpg");
   }
 }
 
 .headerNav {
-  @apply fixed top-0 z-10 flex w-[100vw] items-center justify-around gap-3 rounded-bl-xl rounded-br-xl bg-primary  p-[1.2rem] text-[11px] transition-all duration-500 sm:flex sm:gap-8 sm:text-[16px] md:justify-center lg:gap-24 md:text-[18px];
-
-
+  @apply fixed top-0 z-40 flex w-[100vw] items-center justify-around gap-3 rounded-bl-xl rounded-br-xl bg-primary p-[1.2rem] text-[11px] transition-all duration-500 sm:flex sm:gap-8 sm:text-[16px] md:justify-center md:text-[18px] lg:gap-24;
 }
 
 .altNavbar {
@@ -39,7 +44,7 @@ header {
 }
 
 .headerBrand {
-  @apply absolute left-1/2 top-[45%] flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-12;
+  @apply absolute left-1/2 top-[40%] z-20 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-12;
   animation: fadeIn 2s forwards;
   animation-delay: 0.5s;
   opacity: 0;
@@ -51,10 +56,10 @@ header {
 }
 
 header img {
-  @apply w-[300px];
+  @apply md:w-[300px];
 }
 h1 {
-  @apply relative text-center text-[30px] font-bold text-white sm:text-[50px];
+  @apply relative text-center text-[30px] font-bold text-white sm:whitespace-nowrap md:text-[50px];
   text-shadow:
     1px 1px 4px black,
     -1px -1px 4px black,

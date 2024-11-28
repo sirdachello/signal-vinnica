@@ -1,7 +1,7 @@
 import React from "react";
 
-import books from "../Assets/Images/StudySection/studyingBooks.jpg";
-import students from "../Assets/Images/StudySection/studyingCloseUp.jpg";
+import books from "../Assets/Images/StudySection/studyingBooks_1.webp";
+import students from "../Assets/Images/StudySection/studyingCloseUp_1.webp";
 
 import styles from "../Styles/Study.module.css";
 import rollInStyles from "../Styles/RollInAnimation.module.css";

@@ -1,30 +1,25 @@
 p {
-  @apply sm:text-[20px]
+  @apply sm:text-[20px];
 }
 h3 {
-  @apply leading-relaxed my-4 text-[18px] sm:text-[20px] md:text-[30px];
+  @apply my-4 text-[18px] leading-relaxed sm:text-[20px] md:text-[30px];
 }
 
 /* images look */
 
 .studyTheoryImages {
-  @apply mb-11 relative mx-auto flex w-[100%] justify-center max-w-[800px] transition-all duration-1000;
-
+  @apply relative mx-auto mb-11 flex w-[100%] max-w-[800px] justify-center;
 }
 
-
-
-
 .studyTheoryImages :nth-child(1) {
-  @apply rounded-[20%] absolute left-0 top-0 z-[1] w-[35%] border-[8px] border-white;
+  @apply absolute left-0 top-0 z-[1] w-[35%] rounded-[20%] border-[8px] border-white;
   &.second {
-    @apply right-0 left-auto;
+    @apply left-auto right-0;
   }
 }
 
 .studyTheoryImages :nth-child(2) {
-  @apply rounded-full pt-[8%] relative left-0 top-0 w-[80%] border-[8px] border-white;
-  
+  @apply relative left-0 top-0 w-[80%] rounded-full border-[8px] border-white pt-[8%];
 }
 
 /* images look */
@@ -35,12 +30,11 @@ h3 {
   @apply list-disc pl-2;
 }
 .studyList > li {
-  @apply pl-2 text-[16px] sm:text-[18px] pb-2;
+  @apply pb-2 pl-2 text-[16px] sm:text-[18px];
 }
 .studyList > li:last-child {
   @apply max-w-[500px];
 }
-
 
 .studyList > li::marker {
   @apply text-[16px] sm:text-[20px];
@@ -64,26 +58,19 @@ h3 {
 }
 
 .studyList > li:last-child {
-  @apply bg-primary rounded-2xl p-3 text-balance text-center mt-2 shadow-md;
+  @apply mt-2 text-balance rounded-2xl bg-primary p-3 text-center shadow-md;
 }
 
 /* list specific  */
 
-
-
 .articleContent {
-  @apply w-[90%] sm:w-[500px] mx-auto;
+  @apply mx-auto w-[90%] sm:w-[500px];
 }
-
-
 
 .studyArticle {
-  @apply flex flex-col items-center mt-12 lg:flex-row overflow-hidden;
+  @apply mt-12 flex flex-col items-center overflow-hidden lg:flex-row;
 }
-
-
 
 .studyArticle:not(:first-of-type) {
   @apply mt-[100px] flex-col lg:flex-row-reverse;
-
 }

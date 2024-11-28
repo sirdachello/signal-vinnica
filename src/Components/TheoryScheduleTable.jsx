@@ -20,9 +20,11 @@ export default function TheoryScheduleTable() {
         </tr>
       </tbody>
       <tfoot>
+        <tr>
         <td colSpan={3}>
           Формування груп відбувається за 2 тижні до початку занять
         </td>
+        </tr>
       </tfoot>
     </table>
   );
