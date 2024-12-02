@@ -22,7 +22,8 @@ export default function TheoryScheduleTable() {
       <tfoot>
         <tr>
         <td colSpan={3}>
-          Формування груп відбувається за 2 тижні до початку занять
+          Формування груп відбувається за 2 тижні до початку занять.
+          За довідкою щодо дат набору, звертайтесь за телефонами, <a className="underline" href="#footer">вказаними у контактах</a>.
         </td>
         </tr>
       </tfoot>

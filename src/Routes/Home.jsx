@@ -6,15 +6,8 @@ import Study from "../Components/Study";
 import BenefitsList from "../Components/BenefitsList";
 import ReviewsSection from "../Components/ReviewsSection";
 import StudyProtection from "../Components/StudyProtection";
-
-// const LazyBenefitsList = React.lazy(() => import("../Components/BenefitsList"));
-// const LazyStudyProtection = React.lazy(
-//   () => import("../Components/StudyProtection"),
-// );
-// const LazyStudy = React.lazy(() => import("../Components/Study"));
-// const LazyReviewsSection = React.lazy(
-//   () => import("../Components/ReviewsSection"),
-// );
+import logoProtection from "../Assets/Images/Logo_of_State_Service_of_Mountain_Supervision_and_Industrial_Safety_of_Ukraine.svg-modified (1).png";
+import protStyles from "../Styles/ProtectionDivider.module.css"
 
 export default function Home() {
   return (
@@ -22,25 +15,36 @@ export default function Home() {
       <article>
         <Divider text="Наші Переваги" />
         <div className={styles.contentContainer}>
-            <BenefitsList />
+          <BenefitsList />
         </div>
       </article>
       <article id="study" className={styles.studySection}>
         <ContentDivider text="Навчання" />
         <section className={styles.contentContainer}>
-            <Study />
+          <Study />
+          
         </section>
       </article>
       <article id="protection" className={styles.studySection}>
-        <ContentDivider text="Охорона праці" />
+        <div className={protStyles.dividerBlock}>
+          <img
+            className="size-16 sm:size-20"
+            src={logoProtection}
+            width={60}
+            height={60}
+            alt="Емблема охорони праці України"
+          />
+          <h2 className="sm:hidden">Охорона праці</h2>
+          <h2 className="hidden sm:flex">Навчання з охорони праці</h2>
+        </div>
         <section className={styles.contentContainer}>
-            <StudyProtection />
+          <StudyProtection />
         </section>
       </article>
       <article id="reviews" className={styles.studySection}>
         <ContentDivider text="Відгуки" />
         <section className={styles.contentContainer}>
-            <ReviewsSection />
+          <ReviewsSection />
         </section>
       </article>
     </main>

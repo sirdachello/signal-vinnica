@@ -1,9 +1,9 @@
 import styles from "../Styles/Footer.module.css";
-
 import { ReactComponent as CarIcon } from "../Assets/Animations/car.svg";
 export default function Footer() {
   return (
-    <footer >
+    <>
+        <footer >
       <div className={styles.footerBlock}>
         <address style={{ fontStyle: "normal" }}>
           &#x1F30D;{" "}
@@ -16,15 +16,13 @@ export default function Footer() {
             Вінниця, вул.Стуса, 22{" "}
           </a>
           <br />
-          &#9990; <a aria-label="Call phone number (097) 332-93-24" href="tel:+380973329324">(097) 332-93-24</a>
+          &#9990; <a aria-label="Зателефонувати за номером (093) 889-41-10" href="tel:+380938894110">(093) 889-41-10</a>
           <br />
-          &#9990; <a aria-label="Call phone number (093) 561-12-22" href="tel:+380995611222">(093) 561-12-22</a>
+          &#9990; <a aria-label="Зателефонувати за номером (098) 561-12-22" href="tel:+380985611222">(098) 561-12-22</a>
           <br />
-          &#9990; <a aria-label="Call phone number (098) 561-12-22" href="tel:+380985611222">(098) 561-12-22</a>
+          &#9742; <a aria-label="Зателефонувати за номером  (0432) 67-72-22" href="tel:+380432677222">(0432) 67-72-22</a>
           <br />
-          &#9742; <a aria-label="Call phone number (0432) 67-72-22" href="tel:+380432677222">(0432) 67-72-22</a>
-          <br />
-          &#x2709; <a aria-label="Send email to signal-vin@ukr.net" href="mailto:signal-vin@ukr.net">signal-vin@ukr.net</a>
+          &#x2709; <a aria-label="Відправити лист на пошту signal-vin@ukr.net" href="mailto:signal-vin@ukr.net">signal-vin@ukr.net</a>
           <br />
         </address>
 
@@ -50,5 +48,8 @@ export default function Footer() {
         By Valentine Kliuchev
       </a>
     </footer>
+    </>
   );
 }
+
+  

@@ -1,4 +1,5 @@
 .dividerBlock {
+  position: relative;
     height: 140px;
     margin-block: 80px;
     background: url("../Assets/Images/continuousDivider.jpg") 0 0 repeat-x;
@@ -16,7 +17,7 @@
   }
 
  .dividerBlock h2 {
-    @apply text-[40px] text-center pt-10 font-bold text-white;
+    @apply text-[40px] text-center pt-10 font-bold text-white z-10;
     text-shadow:
     1px 1px 4px black,
     -1px -1px 4px black,

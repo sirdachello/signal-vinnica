@@ -1,0 +1,18 @@
+.prevArrow {
+  @apply hidden customlg:block sm:absolute  size-12 transition-all duration-150;
+  background: url("../Assets/Icons/arrowPrev.svg") center/cover no-repeat;
+  top: 45%;
+  left: -50px;
+  &:hover {
+    @apply scale-125;
+  }
+}
+.nextArrow {
+  @apply hidden customlg:block sm:absolute size-12 transition-all duration-150 rotate-180;
+  background: url("../Assets/Icons/arrowPrev.svg") center/cover no-repeat;
+  top: 45%;
+  right: -50px;
+  &:hover {
+    @apply scale-125;
+  }
+}

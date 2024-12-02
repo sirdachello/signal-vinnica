@@ -1,14 +1,14 @@
 p {
-  @apply sm:text-[20px];
+  @apply sm:text-[20px] px-3;
 }
 h3 {
-  @apply my-4 text-[18px] leading-relaxed sm:text-[20px] md:text-[30px];
+  @apply my-4 text-[18px] leading-relaxed sm:text-[20px] md:text-[28px];
 }
 
 /* images look */
 
 .studyTheoryImages {
-  @apply relative mx-auto mb-11 flex w-[100%] max-w-[800px] justify-center;
+  @apply relative mx-auto mb-11 flex w-[100%] max-w-[750px] justify-center;
 }
 
 .studyTheoryImages :nth-child(1) {
@@ -33,7 +33,7 @@ h3 {
   @apply pb-2 pl-2 text-[16px] sm:text-[18px];
 }
 .studyList > li:last-child {
-  @apply max-w-[500px];
+  @apply max-w-[550px];
 }
 
 .studyList > li::marker {
@@ -64,7 +64,7 @@ h3 {
 /* list specific  */
 
 .articleContent {
-  @apply mx-auto w-[90%] sm:w-[500px];
+  @apply mx-auto w-[90%] sm:w-[550px] px-3;
 }
 
 .studyArticle {

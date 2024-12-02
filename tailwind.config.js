@@ -11,6 +11,9 @@ module.exports = {
       },
       screens: {
         'custom-lg': '1340px', // Define your custom screen size
+        'xs': '530px', // Define your custom screen size
+        'customlg': '930px', // Define your custom screen size
+        'customxl': '1400px', // Define your custom screen size
       },
     },
   },

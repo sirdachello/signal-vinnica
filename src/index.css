@@ -27,5 +27,5 @@ code {
 }
 
 p {
-  @apply indent-3 leading-relaxed my-4;
+  @apply  leading-relaxed my-4;
 }

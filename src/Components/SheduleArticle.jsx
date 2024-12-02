@@ -1,12 +1,14 @@
 import React from "react";
 
+import CarScroller from "./CarScroller";
+
 import TheoryScheduleTable from "../Components/TheoryScheduleTable";
 import rollInStyles from "../Styles/RollInAnimation.module.css";
 
 export function SheduleArticle() {
   return (
     <section
-      className={`mx-auto my-[100px] px-3 sm:w-[500px] lg:w-auto ${rollInStyles.rollInElement}`}
+      className={`mx-auto mt-[100px] px-3 sm:w-[500px] lg:w-auto ${rollInStyles.rollInElement}`}
     >
       <TheoryScheduleTable />
       <h3 className="text-center">
@@ -14,8 +16,7 @@ export function SheduleArticle() {
       </h3>
       <p>
         Розклад водіння <strong>складається індивідуально</strong> для кожного
-        учня, з урахуванням його побажань, можливостей та розкладу теоретичних
-        занять.
+        учня, з урахуванням його побажань, можливостей та розкладу занять.
       </p>
       <p>
         У позаробочий час водіння проводяться за домовленістю з інструктором.
@@ -25,6 +26,8 @@ export function SheduleArticle() {
         пропонуємо додаткові уроки практичного водіння, після яких ви будете
         впевнено відчувати себе у міському трафіку.
       </p>
+      
+      <CarScroller /> 
     </section>
   );
 }

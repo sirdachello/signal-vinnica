@@ -5,7 +5,7 @@ import cogs from "../Assets/Icons/cogs.webp";
 import insurance from "../Assets/Icons/car-insurance.webp";
 import gift from "../Assets/Icons/gift.webp";
 import training from "../Assets/Icons/training.webp";
-import years from "../Assets/Icons/Group 1 (1).webp";
+import years from "../Assets/Icons/Group1.webp";
 
 import styles from "../Styles/BenefitsList.module.css";
 
@@ -28,7 +28,7 @@ const cardsInfo = [
   {
     image: hiring,
     h3: "досвідчені атестовані викладачі",
-    text: "Усі викладачі та інструктори автошколи мають атестаційні посвідчення ГСЦМВС, що підтверджують статус фахівця з підготовки водіїв транспортних засобів.",
+    text: "Усі викладачі та інструктори автошколи мають атестаційні посвідчення ГСЦМВС та РСЦМВС, що підтверджують статус фахівця з підготовки водіїв транспортних засобів.",
     alt: "Ілюстрація атестованого викладача з посвідченням",
   },
   {
